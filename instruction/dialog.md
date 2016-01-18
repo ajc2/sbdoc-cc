@@ -50,13 +50,13 @@ If the input type is non-negative, the dialog uses a "selection" type. The selec
 - 5: Next
 
 If the input type is negative, it represents a negated bitset telling the "button" type.
-
-    Bitset: tspf
-    t: touch screen
-    s: shoulder buttons (LR)
-    p: + Control Pad
-    f: face buttons (ABXY)
-
+```
+Bitset: tspf
+t: touch screen
+s: shoulder buttons (LR)
+p: + Control Pad
+f: face buttons (ABXY)
+```
 If the corresponding bit is set, then that input type will be accepted from the dialog.
 The return value depends on user input.
 - 128: A button pressed
