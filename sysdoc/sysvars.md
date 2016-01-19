@@ -76,5 +76,5 @@ Read-only. Always 1.
 
 ## VERSION ##
 Read-only. An integer in the form `&HXXYYZZZZ` telling the current system version.
-The `ZZZZ` portion appears to be little-endian, thus supporting tertiary versions up to 65535.   
+The `ZZZZ` portion appears to be a little-endian word, thus supporting tertiary versions up to 65535.   
 In 3.2.1, it was `&H03020100`.
