@@ -21,6 +21,3 @@ with a number of spaces before it (4 by default).
 - - -
 `PRINT 5+5;2`
 Prints `102`.
-
-## Notes ##
-It is generally recommended to use `?` instead to keep code shorter.
