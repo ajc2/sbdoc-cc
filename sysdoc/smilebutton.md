@@ -25,3 +25,14 @@ the SMILE Button is the same as launching from the Viewer.
 - `STOP` functions the same as `END`
 - `COMMON DEF` is illegal
 - `USE` appears to have no effect
+- Using `LOAD` without specifying a type prefix throws an `Out of range` error,
+  despite the fact that the default behavior is to load the file as a `PRG` in slot 0.
+  Specifying the slots works as normal.
+
+### Accessing other project folders ###
+A program running from the tool slot can load and save files in other projects.
+This is achieved by appending a project path to the front of a file name.  
+For example, if you wish to load a file `PRG:HELLO` in the project `TEST` to slot 0,
+you would do `LOAD "PRG0:TEST/HELLO"`. The project path for `[DEFAULT]` is simply `/`,
+and the project path for `[SYS]` is `SYS/`. Please keep in mind that writing to `[SYS]`
+is illegal no matter what you're doing.
