@@ -14,14 +14,14 @@ Any valid `TXT` or `PRG` can be chosen.
 ## The Tool Slot ##
 The **tool slot** refers to the hidden system slot that the currently mapped
 program is loaded inside; the name is in reference to the built-in SmileTool program.
-Internally, this slot is referred to as slot 4.  
+Internally, this slot is referred to as slot 4. This slot cannot be accessed by normal means.  
 A program executed from the SMILE Button can exploit certain behaviors that differ from
 executing from a normal slot; such programs are called **tool programs**.  
 These unique behaviors are listed below. Aside from these behaviors, launching from
 the SMILE Button is the same as launching from the Viewer.
 - Access to other project folders (see below)
 - `PRGNAME$` for the current slot is the empty string
-- If `EXEC` is used to launch a different slot,
-execution will not return to the tool slot when `END` is encountered.
+- `PRGSIZE` for the current slot is 0
 - `STOP` functions the same as `END`
 - `COMMON DEF` is illegal
+- `USE` appears to have no effect
