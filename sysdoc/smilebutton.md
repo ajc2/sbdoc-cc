@@ -3,7 +3,7 @@ The **SMILE Button** is a special key on the SmileBASIC keyboard. When pressed,
 the SMILE Button launches a program specified by the user. This is useful
 for developers who wish to use certain custom toolkits while in DIRECT mode.  
 The SMILE Button is disabled while a program is running. By default, the assigned
-program is `SYS/PRG:SMILETOOL`.
+program is `SYS/PRG:SBSMILE`.
 
 ## Mapping the Button ##
 The program mapped to the SMILE Button is chosen via the Options menu.
