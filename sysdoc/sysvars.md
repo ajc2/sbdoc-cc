@@ -28,4 +28,4 @@ The function of these variables depends on the variable itself, so they will be 
 |TABSTEP |  rw  |Number of spaces put between `,`-separated expressions when printing.|
 |  TIME$ |  r   |Time string (`HH:MM:SS` 24-hour form) of the current system time.    |
 |  TRUE  |  r   |Always 1. Use `#TRUE` instead.                                       |
-|VERSION |  r   |Current version `X.Y.Z` encoded as an integer, in `&HXXYYZZ` form.   |
+|VERSION |  r   |Current version `X.Y.Z` encoded as an integer, in `&HXXYYZZZZ` form. |
