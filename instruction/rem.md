@@ -2,7 +2,7 @@
 Marks text as a comment.
 
 ## Use ##
-`REM [text]`  
+`REM {text}`  
 The text after REM is considered a comment, up to the end of the line,
 and thus ignored by the precompiler.
 
