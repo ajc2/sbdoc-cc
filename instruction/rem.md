@@ -10,7 +10,7 @@ and thus ignored by the precompiler.
 `REM Comment`  
 This line is a comment and ignored by the precompiler.
 - - -
-`PRINT "AYY" REM output text`
+`PRINT "AYY" REM output text`  
 The text after the `PRINT` statment is ignored, creating an inline comment.
 
 ## Notes ##
