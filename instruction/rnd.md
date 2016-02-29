@@ -16,7 +16,7 @@ Same as above. The generated number is written to `intvar%`.
 Prints a random number between 0 and 9.
 - - -
 `RND 5,5 OUT I%`  
-A random number between 0 and 4 is written to I%.
+A random number between 0 and 4 is written to `I%`.
 RNG 5 is used to generate the number.
 
 ## See Also ##
