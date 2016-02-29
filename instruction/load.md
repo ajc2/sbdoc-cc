@@ -9,7 +9,8 @@ Loads the file `fname$`. How it is loaded depends on the type prefix.
 - `GRP%:`, where `%` is a graphic page number: the file is loaded as a `GRP` in the given graphic page.
 - `GRPF:` the file is loaded as a `GRP` to the font graphic page.
 
-In a tool slot, it is legal to specify a project name before the file name to load files from other projects.
+In a tool slot, it is legal to specify a project name before
+the file name to load files from other projects.
 Loading from the `SYS` project is legal from any slot.  
 If `diag%` is zero, the load confirmation dialog will not appear.
 If `diag%` is non-zero or not passed, it will.  
@@ -26,6 +27,8 @@ Returns the contents of `fname$` as a single string. Loading rules are the same 
 - - -
 `LOAD fname$,numarr[,diag%]`  
 Loads the contents of `fname$` into the numeric array `numarr`.
-The file at `fname$`must be a `DAT` file. GRP files are not interoperable,
-so you cannot load a `GRP` to an array with this method, even if you use the `DAT:` type prefix.  
+The file at `fname$`must be either a `DAT` or `GRP` file.
+When loading a `GRP` file, the array must be a numeric type and have 2 dimensions.
+The array will be automatically resized to 512x512. Each index will contain the
+RGBA5551 color value of the pixel at index `[y%,x%]`.
 It is impossible to create text `DAT` files, so passing a string array is illegal.
