@@ -9,11 +9,12 @@ An infinite number of declarations can be on one `VAR` statement, and must be se
 Variables must be declared following specific rules (see notes).  
 The `DIM` instruction is equivalent.
 - - -
-VAR arrayname[size0%{,size1%{,size2%{,size3%}}}]  
+`VAR arrayname[size0%{,size1%{,size2%{,size3%}}}]`  
 Declare an array of the given dimensions and size.
-Up to 4 dimensions can be used. size0% is the size of the first
-dimension, size1% the second, etc. At least 1 dimension is
+Up to 4 dimensions can be used. `size0%` is the size of the first
+dimension, `size1%` the second, etc. At least 1 dimension is
 required.
+The `DIM` instruction is equivalent.
 - - -
 `VAR(varname$)`  
 Reference a variable named in the string `varname$`.  
