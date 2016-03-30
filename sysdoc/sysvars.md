@@ -13,12 +13,14 @@ The function of these variables depends on the variable itself, so they will be 
 |`ERRLINE` |  r   |Line number of the source code where the last error occurred.        |
 | `ERRNUM` |  r   |Error number of the last error that occurred (see error table.)      |
 | `ERRPRG` |  r   |Slot in which the last error occurred.                               |
+|`EXTFEATURE`|?|Indicates instruction set? (3.3.0)|
 | `FALSE`  |  r   |Always 0. Use `#FALSE` instead.                                      |
 |`FREEMEM` |  r   |Current amount of free user memory, in bytes. Max memory 8MiB.       |
 |`HARDWARE`|  r   |Tells the current system. 0 is 3DS, 1 is N3DS.                       |
 |`MAINCNT` |  r   |Amount of time passed since SmileBASIC started, in frames.           |
 | `MICPOS` |  r   |Current sampling position within the microphone buffer.              |
 |`MICSIZE` |  r   |Number of samples to be stored within the microphone sample buffer.  |
+|`MILLISEC`|  r   |Amount of time passed since SmileBASIC started, in milliseconds (3.3.0)|
 |`MPCOUNT` |  r   |Number of systems connected during wireless play.                    |
 | `MPHOST` |  r   |Multiplayer ID of the host system.                                   |
 |`MPLOCAL` |  r   |Multiplayer ID of the current system.                                |
