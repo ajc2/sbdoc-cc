@@ -10,6 +10,7 @@ A brief summary of those changes is listed here.**
 within the SmileBASIC file system. These files include:
 - `TXT` files, which contain text (`TXT`) or program source code (`PRG`).
 - `DAT` files, which contain a numeric array (`DAT`) or a graphic page image (`GRP`).
+
 When loading, the first argument is always the file path string `fpath$`; this
 string describes both the resource loading mode of `LOAD` as well as location of the
 source file. The format of `LOAD` that follows is dependent on the resource type.  
