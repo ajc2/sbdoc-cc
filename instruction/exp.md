@@ -1,16 +1,20 @@
 # EXP #
-Return the mathematical constant e, raised to the given power.
+Return Euler's number raised to the given power.
 
-## Use ##
+## Description ##
+`EXP` raises Euler's number, *e*, to the power specified. If no exponent is given,
+the value of *e* is returned.
+
+## Syntax ##
 `EXP([exponent])`  
-Returns the value of e exponentiated by `exponent`.  
-If `exponent` is not passed, the constant e is returned.
+Returns the value of *e* exponentiated by `exponent`.  
+If `exponent` is not passed, the constant *e* is returned.
 This is equivalent to passing 1 as the exponent.  
-The exact value of e returned is 2.7182818284590451.
+The exact value of *e* returned is 2.7182818284590451.
 
 ## Examples ##
 `PRINT EXP()`  
-Print the mathematical constant e.
+Print the mathematical constant *e*.
 
 ## Notes ##
 `EXP()` performs nearly 3 times as fast when not given an argument, even if the argument is 1.
