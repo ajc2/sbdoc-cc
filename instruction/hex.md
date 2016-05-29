@@ -1,7 +1,14 @@
 # HEX$ #
 Get a hex string representing the given integer.
 
-## Use ##
+## Description ##
+`HEX$` takes an integer and returns a string of its hexadecimal representation.
+For example, the integer 127 will be returned as the string "7F". If a maximum length
+is specified, the output will be padded with 0 until it reaches the length.
+If the output is already at that length, no 0s are added, and if it is longer
+an error is thrown.
+
+## Syntax ##
 `HEX$(num%{,length%})`  
 Returns the given integer as a hex string.  
 If `length%` is passed, leading zeroes are added to
