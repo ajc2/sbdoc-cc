@@ -5,7 +5,7 @@ Controls the behavior of the SmileBASIC preprocessor.
 `OPTION COMPAT | DEFINT | STRICT | TOOL`  
 Sets the behavior of the preprocessor according to the given option.
 The option given can be only one of the following:
-- `COMPAT`: *Coming in 3.3.0.* Puts the preprocessor in compatibility mode (see notes in the future.)
+- `COMPAT`: *Coming in Wii U version.* Puts the preprocessor in compatibility mode (see notes in the future.)
 - `DEFINT`: Unsuffixed variables are assumed to be integer-type, instead of the default real-type.
 - `STRICT`: The preprocessor will throw an error when encountering an undeclared variable
   instead of creating a reference to it.
