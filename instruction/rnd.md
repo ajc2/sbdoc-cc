@@ -1,9 +1,14 @@
 # RND #
 Generate a random integer.
 
-## Use ##
+## Description ##
+`RND` returns a random integer greater than or equal to 0, and less than a
+specified integer. A specific generator can be used to generate the number
+by passing its ID.
+
+## Syntax ##
 `RND({id%,}limit%)`  
-Returns a random integer greater-than or equal-to 0,
+Returns a random integer greater than or equal to 0,
 and less than `limit%`. If `id%` is passed, the RNG specified
 will be used to generate the number. Otherwise, RNG 0 is used
 by default.
