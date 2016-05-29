@@ -1,9 +1,9 @@
 # SNDSTOP #
 Stops all sound that is currently playing.
 
-***This instruction is only available in version 3.3.0.*  
-This version is currently only available in Japan,
-so this feature will throw an error upon use in other regions.**
+***This is only available in version 3.3.0. and above.*  
+If you plan on writing your program for compatibility with previous
+versions, don't use this feature.**
 
 ## Description ##
 `SNDSTOP` immediately stops all sounds playing on the system.
@@ -17,4 +17,4 @@ In addition, `SNDSTOP` will stop all BEEPs currently playing.
 
 ## Syntax ##
 `SNDSTOP`  
-Stops all sounds currently playing..
+Stops all sounds currently playing.
