@@ -1,3 +1,4 @@
+# Turns out I totally misunderstood RINGCOPY, and this document has it backwards :'( Don't read this for the time being #
 # RINGCOPY #
 Copy data between numeric arrays as if they were ring buffers.
 
@@ -18,7 +19,7 @@ They will be listed below.
 - No copying characters between strings (throws `Type mismatch`)
 - 2D arrays are treated as multichannel data instead of being linearized (see below)
 - 3D and 4D arrays are unsupported (throws `Type mismatch`)
-- Function form (see below)
+- Return form (see below)
 
 ### Multichannel Copying ###
 If the output is a two-dimensional array, then it is treated
@@ -67,7 +68,7 @@ as if the input array has one channel (a 2D array whose first dimension is 1.)
 If the input array is two-dimensional, it is also treated as multichannel data.
 The number of channels in the input (the first dimension) must match that of the output,
 **with one exception:** if the input has a first dimension of 1 (one channel), the copy
-is the same as the 1D case.
+is the same as the 1D case. The size of the second dimension need not match the destination.
 
 The contents of each channel are copied from the source to the destination,
 per channel. The contents of the first source channel are copied to
@@ -86,3 +87,21 @@ the first destination channel, and so on.
 If the destination is a linear array, a 2D array may not be used as source,
 with the exception of 2D arrays with one channel (as described above).
 In this case, the result is the same as copying between two linear arrays.
+If the destination is a 2D array of one channel, it is also treated as if it
+is linear.
+
+Considering all edge cases of single-channel data, it can be thought that
+`RINGCOPY` treats linear arrays as special cases of multichannel data,
+where the arrays only contain one channel.
+
+## Syntax ##
+### Command ###
+`RINGCOPY dest[],dofs%,src[]{{,sofs%},amount%}`  
+Performs a ring buffer copy of the data from `src[]` to `dest[]`.
+The data is written to `dest[]` starting at index `dofs%`.
+All operations are performed per-channel. The source channel is treated
+as a ring buffer.  
+If `amount%` is passed, then only `amount%` items will be
+copied. If `amount%` exceeds the length of the destination channel minus `dofs%`,
+an error will occur.  
+If `sofs%` is passed, then the copy will start at index `sofs%` of the source channel.
