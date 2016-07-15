@@ -23,7 +23,8 @@ They will be listed below.
 ### Multichannel Copying ###
 If the output is a two-dimensional array, then it is treated
 as multichannel data, with as many channels as the first dimension of
-the array.
+the array. This differs from `COPY`, which treats arrays of higher
+dimensions as if they were linear arrays, laid out as they are in memory.
 
 For example, a 2x5 array filled with zeroes may be modelled like this:
 
@@ -82,3 +83,6 @@ the first destination channel, and so on.
     | 4 | 5 | 6 | 4 | 5 | <---< | 4 | 5 | 6 |
     +---+---+---+---+---+       +---+---+---+
 
+If the destination is a linear array, a 2D array may not be used as source,
+with the exception of 2D arrays with one channel (as described above).
+In this case, the result is the same as copying between two linear arrays.
