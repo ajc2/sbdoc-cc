@@ -40,9 +40,45 @@ as if it were its own linear array.
     +---+---+---+---+---+
     | 0 | 0 | 0 | 0 | 0 |
     +---+---+---+---+---+
-    
     Channel 1
     +---+---+---+---+---+
     | 0 | 0 | 0 | 0 | 0 |
     +---+---+---+---+---+
+
+In this mode, `RINGCOPY` can accept either a one-dimension or two-dimension array as input.
+
+#### 1D Case ####
+If the input array is one-dimensional, the input data is copied into each destination channel,
+in the same ring buffer copying style as normal. In other words, it is treated
+as if the input array has one channel (a 2D array whose first dimension is 1.)
+
+    Destination
+    Channel 0
+    +---+---+---+---+---+
+    | 1 | 2 | 3 | 1 | 2 | <-\   Source
+    +---+---+---+---+---+   |   +---+---+---+
+    Channel 1               +-< | 1 | 2 | 3 |
+    +---+---+---+---+---+   |   +---+---+---+
+    | 1 | 2 | 3 | 1 | 2 | <-/
+    +---+---+---+---+---+
+
+#### 2D Case ####
+If the input array is two-dimensional, it is also treated as multichannel data.
+The number of channels in the input (the first dimension) must match that of the output,
+**with one exception:** if the input has a first dimension of 1 (one channel), the copy
+is the same as the 1D case.
+
+The contents of each channel are copied from the source to the destination,
+per channel. The contents of the first source channel are copied to
+the first destination channel, and so on.
+
+    Destination                 Source
+    Channel 0                   Channel 0
+    +---+---+---+---+---+       +---+---+---+
+    | 1 | 2 | 3 | 1 | 2 | <---< | 1 | 2 | 3 |
+    +---+---+---+---+---+       +---+---+---+
+    Channel 1                   Channel 1
+    +---+---+---+---+---+       +---+---+---+
+    | 4 | 5 | 6 | 4 | 5 | <---< | 4 | 5 | 6 |
+    +---+---+---+---+---+       +---+---+---+
 
