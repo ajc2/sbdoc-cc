@@ -5,25 +5,19 @@ Perform basic math operations on arrays.
 An additional purchase is required to use this instruction in SmileBASIC.**
 
 ## Description ##
-`ARYOP` performs a math operation on a given array using a number of inputs,
-based on its set operating mode. The operating modes are as follows:
-- `#AOPADD` - Adds a constant value to every element of an array
-- `#AOPSUB` - Subtracts a constant value from every element of an array
-- `#AOPMUL` - Multiplies every element of an array by a constant value
-- `#AOPDIV` - Divides every element of an array by a constant value
-- `#AOPMAD` - Multiply and Add (description to come)
-- `#AOPLIP` - Linear Interpolate (description to come)
-- `#AOPCLP` - Clamps all values in an array to a specified range
+`ARYOP` performs a math operation using a number of inputs,
+based on its set operating mode. This result is computed per every
+index in the output array.
 
 ## Syntax ##
-In its most simplified form, `ARYOP` takes the syntax `ARYOP mode%,inArr[],outArr[],arglist...`
-where `arglist` is an additional set of inputs dependent on the operation mode.
+In its most simplified form, `ARYOP` takes the syntax `ARYOP mode%,outArr[],arglist...`
+where `arglist` is a set of inputs dependent on operation mode.
 Each operation mode will be described here separately, named by its associated constant.
 ### #AOPADD ###
-`ARYOP #AOPADD,inArr[],outArr[],addend`  
-The value of `addend` is added to every value in `inArr[]` and the result is
+`ARYOP #AOPADD,outArr[],augend,addend`  
+The value of `addend` is added to the augend and the result is
 stored in `outArr[]`.  
-This would be equivalent to `outArr[i%]=inArr[i%]+addend`,
+This would be equivalent to `outArr[i%]=augend+addend`,
 where `i%` is the array index.
 ### #AOPSUB ###
 `ARYOP #AOPSUB,inArr[],outArr[],subtrahend`  
