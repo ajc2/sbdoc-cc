@@ -1,10 +1,11 @@
 # PROJECT #
 A family of instructions for getting and setting the active project.
 
-## Use ##
+## Syntax ##
+### Setting the Active Project ###
 `PROJECT string$`  
-Sets the active project to the one named in `string$`. Direct Mode only.
-- - - 
+Sets the active project to the one named in `string$`. DIRECT Mode only.
+### Getting the Active Project ###
 `PROJECT()`  
 Returns the name of the active project as a string.
 - - - 
@@ -21,7 +22,7 @@ Sets the active project to `HELLO`.
 ## Notes ##
 ### Project Naming Rules ###
 Projects follow the same name rules as files.
-- The name may contain only capital letters, numbers, and the following symbols: `.@-_`
+- The name may contain only capital Latin letters, numbers, underscores, and hyphens.
 - The name must be between 1 and 14 characters.
 
 ### Documentation ###
