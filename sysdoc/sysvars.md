@@ -12,8 +12,8 @@ The function of these variables depends on the variable itself, so they will be 
 |  `DATE$` |  r   |Date string (`YYYY/MM/DD` form) of current system date.              |
 |`ERRLINE` |  r   |Line number of the source code where the last error occurred.        |
 | `ERRNUM` |  r   |Error number of the last error that occurred (see error table.)      |
-| `ERRPRG` |  r   |Slot in which the last error occurred.                               |
-|`EXTFEATURE`|?|Indicates instruction set? (3.3.0)|
+|  `ERRPRG`  |  r   |Slot in which the last error occurred.                               |
+|`EXTFEATURE`|r|Indicates available DLC (as of 3.3.x true/false for audio DLC, maybe bitset in future?)|
 | `FALSE`  |  r   |Always 0. Use `#FALSE` instead.                                      |
 |`FREEMEM` |  r   |Current amount of free user memory, in bytes. Max memory 8MiB.       |
 |`HARDWARE`|  r   |Tells the current system. 0 is 3DS, 1 is N3DS.                       |
