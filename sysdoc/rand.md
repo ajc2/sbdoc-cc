@@ -34,17 +34,16 @@ RNG 2 with a random seed. In addition, an optional seed value can be specified.
 specific seed, the same sequence of numbers can be obtained by a generator every time.
 
 ## Example Code ##
-```
-FOR I%=1 TO 20
- PRINT RND(10)
-NEXT
-```
+
+    FOR I%=1 TO 20
+     PRINT RND(10)
+    NEXT
+
 Prints 20 random integers, between 0 and 9.
 
-```
-RANDOMIZE 0,12345
-PRINT RNDF()
-```
+    RANDOMIZE 0,12345
+    PRINT RNDF()
+
 Will always print 0.801218124.
 
 ## Technical Notes ##
